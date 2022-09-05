@@ -1,0 +1,22 @@
+The following are some issues I had while working on this project.
+1. Converting JSON Dump to Dataframe
+
+    My code that originally didn't work: 1a. Indices must be same length error, 1b. dataframe is 1 row X 60 columns.
+
+    1a. #callDf = pd.DataFrame(columns=["Expiry","Strike", 'openInterest','volume'],index=[nearest5expiryList,strikeList])
+       #putDf = pd.DataFrame(columns=["Expiry","Strike", 'openInterest','volume'],index=[nearest5expiryList,strikeList])
+
+    1b. callDf = pd.json_normalize(r.json()['callExpDateMap'])
+       print(callDf)
+
+2. JSON Dump had many dictionary hierarchies, along with a tricky list after strike key.
+SOLUTION: Must have 0 index key after the strike key.
+
+    2a.print(r.json()['putExpDateMap']['2022-08-24:5']['422.0'][0]['openInterest'])
+
+3. Having Multi-level index hierarchy with indices having different lengths.
+
+    Helpful link: https://stackoverflow.com/questions/40432018/merge-multiindex-dataframe-with-unequal-length
+
+4. Plotting the data was a bit tricky and I had to overcome problems such as having overlapping subplots,
+changing subplot size to fit the data, and having multiple legends on a plot.
