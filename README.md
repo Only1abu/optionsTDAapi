@@ -9,6 +9,6 @@
 * Write to Excel files from Python
 
 ## September options flow for the nearest 5 expiration dates.
-## ![Options Data](https://github.com/Only1abu/optionsTDAapi/blob/master/optionsDataSeptember.pdf)
 #### *Call Options on top row, Put Options on bottom row*
+## ![Screenshot](screenshot.png)
 
