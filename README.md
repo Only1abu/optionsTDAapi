@@ -4,7 +4,7 @@
 *Problems I encountered are documented in docs.txt*
 
 ## Goals In This Project
-* Use Data Visualization and Pandas Tools to show $SPY option contract's volume and open interest.
+* Use MatplotLib Data Visualization and Pandas Tools to show $SPY option contract's volume and open interest.
 * Gain comfortability using and calling on TD Ameritrade's API.
 * Write to Excel files from Python
 
